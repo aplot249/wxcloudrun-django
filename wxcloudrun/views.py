@@ -19,6 +19,10 @@ def index(request, _):
     return render(request, 'index.html')
 
 
+def Check(request,_):
+    return JsonResponse({'echostr': request.request.GET.get ( 'echostr'},json_dumps_params={'ensure_ascii': False})
+
+
 def counter(request, _):
     """
     获取当前计数
